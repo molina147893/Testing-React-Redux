@@ -12,9 +12,9 @@ import './app.scss';
    it is only here as an exampleof testing PropTypes */
 const tempArr = [{
   fName: 'Joe',
-  lName: 'Bloggs',
-  email: 'joebloggs@gmail.com',
-  age: 24,
+  lName: 'Biden',
+  email: 'joebiden@gmail.com',
+  age: 82,
   onlineStatus: true
 }];
 
