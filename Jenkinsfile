@@ -3,7 +3,7 @@ pipeline {
     
     // Este pipeline se ejecuta solo en la rama "1-feature"
     triggers {
-        githubPush()  // O se puede usar un webhook para detectar cambios en el repositorio
+        githubPush()
     }
     
     stages {
