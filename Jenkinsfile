@@ -3,7 +3,7 @@ pipeline {
 
     // Este pipeline se ejecuta solo en la rama "main"
     triggers {
-        githubPush()
+        pollSCM('H/15 * * * *')
     }
 
     environment {
