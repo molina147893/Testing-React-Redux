@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    // Este pipeline se ejecuta solo en la rama "main"
+    triggers {
+        githubPush()
+    }
+
     environment {
         GIT_REPO = 'https://github.com/molina147893/Testing-React-Redux'
         GIT_BRANCH = 'main'
