@@ -40,5 +40,24 @@ pipeline {
                 }
             }
         }
+        stage('Reporting KPI: Code Coverage') {
+            steps {
+                script {
+                    def timestamp = new Date().format("yyyyMMdd_HHmmss")
+                    def reportDir = "coverage_reports"
+                    def reportFile = "${reportDir}/coverage_${timestamp}.txt"
+                    
+                    sh """
+                        mkdir -p ${reportDir}
+                        echo 'Resumen de cobertura de código (simulado)' > ${reportFile}
+                        echo 'Cobertura total: 82.5%' >> ${reportFile}
+                        echo 'src/App.js: 91%' >> ${reportFile}
+                        echo 'src/reducers/posts.js: 78%' >> ${reportFile}
+                    """
+                    
+                    archiveArtifacts artifacts: "${reportFile}", fingerprint: true
+                }
+            }
+        }
     }
 }
